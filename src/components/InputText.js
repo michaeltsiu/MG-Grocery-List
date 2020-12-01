@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 
 const InputText = (props) => {
-  const [value, setValue] = useState('');
+  const [name, setName] = useState('');
+  const [quantity, setQuantity] = useState(1);
 
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      props.handleSubmit(value);
-      setValue('');
+      props.handleSubmit({item: name, quantity: quantity});
+      setName('');
+      setQuantity(1);
     }}>
-      <input type="text" value={value} onChange={e => setValue(e.target.value)} />
+      <input type="text" placeholder="Item name" value={name} onChange={e => setName(e.target.value)} />
+      <input type="number" placeholder="Quantity" value={quantity} min="1" onChange={e => setQuantity(e.target.value)} />
       <button>Add</button>
     </form>
   )
