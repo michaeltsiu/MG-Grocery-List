@@ -1,0 +1,9 @@
+.ListItem {
+ display: flex;
+}
+
+.ListItem button{
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+}
