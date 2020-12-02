@@ -13,6 +13,6 @@ Easy as that!
 
 ## Usage
 
-To add an item, fill in the desired item name and quantity, press enter or the 'Add' button and Voila!
-To delete an item, click on the edit button and click on the red X on the right of your item.
-To mark an item as completed, click on the item to have it crossed out.
+- To add an item, fill in the desired item name and quantity, press enter or the 'Add' button.
+- To delete an item, click on the edit button and click on the red X on the right of your item.
+- To mark an item as completed, click on the item to have it crossed out.
