@@ -1,3 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap');
+
 .list-container {
-  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "App-Banner App-Banner App-Banner"
+    ". App-Grocery-List .";
+
+  background-color: #2e2c2c;
+  height: 100vh;
+}
+
+.App-Input {
+  display: flex;
+  margin-top: 2vh;
+}
+
+.App-Banner {
+  grid-area: App-Banner;
+}
+
+.App-Container {
+  grid-area: App-Grocery-List;
+  background-color: #F7F4EB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw;
+  height: 75vh;
+  box-shadow: 3px 5px 10px 0px black;
+  border-radius: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+@media screen and (max-width: 900px) {
+  .list-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "App-Banner"
+      "App-Grocery-List";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .App-Container {
+    width: 70vw;
+    height: 90vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
 }
