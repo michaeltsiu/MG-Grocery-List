@@ -1,6 +1,6 @@
 import React from 'react';
-
-import ListItem from './ListItem'
+import ListItem from './ListItem';
+import '../styling/ListDisplay.css';
 
 const ListDisplay = (props) => {
   const items = props.items.map((item, i) => (
@@ -8,12 +8,17 @@ const ListDisplay = (props) => {
       key={i}
       name={item}
       handleClick={props.handleClick}
+      edit={props.edit}
     />
   ))
+
   return (
-    <ul>
-      {items}
-    </ul>
+    <div className="ListDisplay">
+
+      <ul className="ListDisplay-List">
+          {items}
+      </ul>
+    </div>
   )
 }
 
