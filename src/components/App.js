@@ -33,6 +33,7 @@ const App = () => {
             items={items}
             handleClick={(item) => { setItems(items.slice().filter((i) => i !== item)) }}
             edit={edit}
+            setItems={setItems}
           />
 
         </div>

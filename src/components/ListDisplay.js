@@ -9,6 +9,9 @@ const ListDisplay = (props) => {
       name={item}
       handleClick={props.handleClick}
       edit={props.edit}
+      index={i}
+      setItems={props.setItems}
+      items={props.items}
     />
   ))
 
