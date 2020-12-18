@@ -16,6 +16,7 @@
 .App-Input {
   display: flex;
   margin-top: 2vh;
+  overflow: hidden;
 }
 
 .App-Banner {
