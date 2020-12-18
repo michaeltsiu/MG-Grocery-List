@@ -17,7 +17,6 @@ const ListDisplay = (props) => {
 
   return (
     <div className="ListDisplay">
-
       <ul className="ListDisplay-List">
           {items}
       </ul>

@@ -3,52 +3,53 @@ import '../styling/ListItem.css'
 
 const ListItem = ({name, handleClick, edit, index, setItems, items}) => {
   const [complete, setComplete] = useState(false);
-  // onChange(e) {
-  //   const 
-  //     [e.target.name]: e.target.value
-  // }
-  const changeItem = (e) => {
-    // console.log(name.item)
+
+  const editItem = (e) => {
     const { name,value } = e.target
     const newObj = items.slice();
     newObj[index][name] = value
-    // newObj[index].item = e.targ≈et.value
-    setItems(newObj);
-  }
-
-  const changeQty = (name) => (e) => {
-    // console.log(name.item)
-    const newObj = items.slice();
-    newObj[index].quantity = e.target.value
     setItems(newObj);
   }
 
   return (
-    <div className="ListItem">
+    <li type="circle"
+        onClick={!edit ? () => setComplete(!complete) : undefined}
+        className={`ListItem ${ complete  && !edit ? 'ListItem-Completed' : ''}`}
+    >
 
       <div className="ListItem-Container">
 
-        <li type="circle"
-            onClick={() => setComplete(!complete)}
-            className={ complete ? 'ListItem-Completed' : null}
-        >
+        <span className="ListItem-Name">
+          &nbsp;
+          {edit
+            ? <input
+                name="item"
+                onChange={editItem}
+                value={name.item}
+              />
+            : name.item}
+        </span>
 
-          <span>
+        <span className="ListItem-Qty">
+          Qty:&nbsp;
+          {edit
+            ? <input
+                name="quantity"
+                className="ListItem-QInput"
+                onChange={editItem}
+                value={name.quantity}
+              />
+            : name.quantity
+          }
+        </span>
 
-            <div>{edit ? <input name="item" onChange={changeQty('item')} value={name.item} ></input> : name.item}</div>
-
-            <div>Qty: {edit ? <input name="quantity" onChange={changeQty('qty')} value={name.quantity}></input> : name.quantity}</div>
-
-          </span>
-        </li>
+        {edit
+          ? <button onClick={() => handleClick(name)}>X</button>
+          : null
+        }
       </div>
 
-      {edit
-        ? <button onClick={() => handleClick(name)}>X</button>
-        : null
-      }
-    </div>
-
+    </li>
   )
 }
 
