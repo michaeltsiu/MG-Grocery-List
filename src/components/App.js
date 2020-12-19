@@ -10,9 +10,11 @@ const App = () => {
   return (
     <div className="list-container">
 
-      <div className="App-banner">
-        <img src="https://res.cloudinary.com/mozii/image/upload/f_auto,q_auto/v1596587957/MoziiLogos/color_logo_transparent_5_cjnc7t.png" alt="Company Logo"></img>
-      </div>
+      <img
+        className="App-banner"
+        src="https://res.cloudinary.com/mozii/image/upload/f_auto,q_auto/v1596587957/MoziiLogos/color_logo_transparent_5_cjnc7t.png"
+        alt="Company Logo"
+      />
 
       <div className="App-Container">
 
@@ -20,14 +22,13 @@ const App = () => {
 
         <div className="App-GroceryList">
 
-          <div className="App-Input">
-            <InputText
-              handleSubmit={(item) => {
-                setItems(items.concat(item));
-              }}
-            />
-            <button onClick={() => setEdit(!edit)}>Edit</button>
-          </div>
+          <InputText
+            handleSubmit={(item) => {
+              setItems(items.concat(item));
+            }}
+            edit={edit}
+            setEdit={setEdit}
+          />
 
           <ListDisplay
             items={items}

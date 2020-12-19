@@ -1,7 +1,7 @@
 import React, {useState}  from 'react';
 import '../styling/ListItem.css'
 
-const ListItem = ({name, handleClick, edit, index, setItems, items}) => {
+const ListItem = ({ name, handleClick, edit, index, setItems, items }) => {
   const [complete, setComplete] = useState(false);
 
   const editItem = (e) => {

@@ -2,23 +2,23 @@ import React from 'react';
 import ListItem from './ListItem';
 import '../styling/ListDisplay.css';
 
-const ListDisplay = (props) => {
-  const items = props.items.map((item, i) => (
+const ListDisplay = ({ items, handleClick, edit, setItems}) => {
+  const products = items.map((item, i) => (
     <ListItem
       key={i}
       name={item}
-      handleClick={props.handleClick}
-      edit={props.edit}
+      handleClick={handleClick}
+      edit={edit}
       index={i}
-      setItems={props.setItems}
-      items={props.items}
+      setItems={setItems}
+      items={items}
     />
   ))
 
   return (
     <div className="ListDisplay">
       <ul className="ListDisplay-List">
-          {items}
+          {products}
       </ul>
     </div>
   )

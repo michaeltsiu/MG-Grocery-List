@@ -1,6 +1,12 @@
-.InputText-Name {
-
+.InputText {
+  display: flex;
+  margin-top: 2vh;
+  overflow: hidden;
 }
+
+/* .InputText-Name {
+
+} */
 
 .InputText-Quantity {
   width: 25px;
