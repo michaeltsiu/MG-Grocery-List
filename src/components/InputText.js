@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styling/InputText.css';
 
-const InputText = ({ handleSubmit, setEdit, edit }) => {
+const InputText = ({ addItem, setEdit, edit }) => {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
 
@@ -10,7 +10,7 @@ const InputText = ({ handleSubmit, setEdit, edit }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handleSubmit({item: name, quantity: quantity});
+          addItem({item: name, quantity: quantity});
           setName('');
           setQuantity(1);
         }}

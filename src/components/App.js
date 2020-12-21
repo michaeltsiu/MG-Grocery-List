@@ -4,7 +4,13 @@ import ListDisplay from './ListDisplay';
 import InputText from './InputText';
 
 const App = () => {
-  const [items, setItems] = useState([{item: 'Disposable Masks', quantity: 50}, {item: 'Hand Sanitizer', quantity: 5}, {item: 'Disposable Gloves', quantity: 100}, {item: 'Toilet Paper', quantity: 10}]);
+  const list = [
+    {item: 'Disposable Masks', quantity: 50},
+    {item: 'Hand Sanitizer', quantity: 5},
+    {item: 'Disposable Gloves', quantity: 100},
+    {item: 'Toilet Paper', quantity: 10}
+  ];
+  const [items, setItems] = useState(list);
   const [edit, setEdit] = useState(false);
 
   return (
@@ -23,7 +29,7 @@ const App = () => {
         <div className="App-GroceryList">
 
           <InputText
-            handleSubmit={(item) => {
+            addItem={(item) => {
               setItems(items.concat(item));
             }}
             edit={edit}
@@ -32,7 +38,7 @@ const App = () => {
 
           <ListDisplay
             items={items}
-            handleClick={(item) => { setItems(items.slice().filter((i) => i !== item)) }}
+            deleteItem={(item) => { setItems(items.slice().filter((i) => i !== item)) }}
             edit={edit}
             setItems={setItems}
           />

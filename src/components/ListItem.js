@@ -1,7 +1,7 @@
 import React, {useState}  from 'react';
 import '../styling/ListItem.css'
 
-const ListItem = ({ name, handleClick, edit, index, setItems, items }) => {
+const ListItem = ({ name, deleteItem, edit, index, setItems, items }) => {
   const [complete, setComplete] = useState(false);
 
   const editItem = (e) => {
@@ -44,7 +44,7 @@ const ListItem = ({ name, handleClick, edit, index, setItems, items }) => {
         </span>
 
         {edit
-          ? <button onClick={() => handleClick(name)}>X</button>
+          ? <button onClick={() => deleteItem(name)}>X</button>
           : null
         }
       </div>
