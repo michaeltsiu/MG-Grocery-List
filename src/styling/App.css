@@ -51,3 +51,13 @@
     margin-right: 15vw;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .App-Container {
+    width: 90vw;
+    height: 90vh;
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
