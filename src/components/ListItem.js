@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { ItemsContext } from '../utils/Context';
 import '../styling/ListItem.css';
 
@@ -60,11 +61,9 @@ const ListItem = ({ name, index }) => {
   )
 }
 
-export default ListItem
+ListItem.propTypes = {
+  name: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired
+}
 
-// import PropTypes from 'prop-types';
-// ListItem.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   index: PropTypes.number.isRequired,
-//   items: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired, PropTypes.number.isRequired))
-// }
+export default ListItem
