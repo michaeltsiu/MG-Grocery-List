@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import './styling/index.css';
+import { ItemsProvider } from './utils/Context';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ItemsProvider>
     <App />
-  </React.StrictMode>,
+  </ItemsProvider>,
   document.getElementById('root')
 );

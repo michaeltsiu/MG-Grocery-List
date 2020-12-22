@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../styling/InputText.css';
+import { ItemsContext } from '../utils/Context';
 
-const InputText = ({ addItem, setEdit, edit }) => {
-  const [name, setName] = useState('');
-  const [quantity, setQuantity] = useState(1);
+const InputText = () => {
+  const [ name, setName ] = useState('');
+  const [ quantity, setQuantity ] = useState(1);
+  const [ items, setItems, edit, setEdit ] = useContext(ItemsContext);
+
+  const addItem = (item) => {
+    setItems(items.concat(item));
+  };
 
   return (
     <div className="InputText">

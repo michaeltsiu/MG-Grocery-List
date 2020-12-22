@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ListItem from './ListItem';
 import '../styling/ListDisplay.css';
+import { ItemsContext } from '../utils/Context';
 
-const ListDisplay = ({ items, deleteItem, edit, setItems}) => {
+const ListDisplay = () => {
+  const [items] = useContext(ItemsContext);
+
   const products = items.map((item, i) => (
     <ListItem
       key={i}
       name={item}
-      deleteItem={deleteItem}
-      edit={edit}
       index={i}
-      setItems={setItems}
-      items={items}
     />
   ))
 

@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styling/App.css';
 import ListDisplay from './ListDisplay';
 import InputText from './InputText';
 
 const App = () => {
-  const list = [
-    {item: 'Disposable Masks', quantity: 50},
-    {item: 'Hand Sanitizer', quantity: 5},
-    {item: 'Disposable Gloves', quantity: 100},
-    {item: 'Toilet Paper', quantity: 10}
-  ];
-  const [items, setItems] = useState(list);
-  const [edit, setEdit] = useState(false);
 
   return (
     <div className="list-container">
@@ -27,21 +19,8 @@ const App = () => {
         <h1>GROCERY LIST</h1>
 
         <div className="App-GroceryList">
-
-          <InputText
-            addItem={(item) => {
-              setItems(items.concat(item));
-            }}
-            edit={edit}
-            setEdit={setEdit}
-          />
-
-          <ListDisplay
-            items={items}
-            deleteItem={(item) => { setItems(items.slice().filter((i) => i !== item)) }}
-            edit={edit}
-            setItems={setItems}
-          />
+            <InputText />
+            <ListDisplay />
 
         </div>
       </div>
