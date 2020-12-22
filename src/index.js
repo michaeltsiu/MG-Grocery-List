@@ -5,6 +5,7 @@ import './styling/index.css';
 import { ItemsProvider } from './utils/Context';
 
 ReactDOM.render(
+  // Context wrapped around App
   <ItemsProvider>
     <App />
   </ItemsProvider>,

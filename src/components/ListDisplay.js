@@ -5,7 +5,7 @@ import { ItemsContext } from '../utils/Context';
 
 const ListDisplay = () => {
   const [items] = useContext(ItemsContext);
-
+  // Function to map through all items, giving it an index to access it
   const products = items.map((item, i) => (
     <ListItem
       key={i}
@@ -15,11 +15,10 @@ const ListDisplay = () => {
   ))
 
   return (
-    <div className="ListDisplay">
-      <ul className="ListDisplay-List">
-          {products}
-      </ul>
-    </div>
+    <ul className="ListDisplay-List">
+      {/* Returning the new product array */}
+      {products}
+    </ul>
   )
 }
 

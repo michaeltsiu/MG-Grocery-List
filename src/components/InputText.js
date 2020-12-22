@@ -21,28 +21,26 @@ const InputText = () => {
           setQuantity(1);
         }}
       >
-        <div className="InputText-Input">
+        {/* Input box for the item to be added */}
+        <input
+          className="InputText-Name"
+          type="text"
+          placeholder="Item name"
+          value={name}
+          required="required"
+          onChange={e => setName(e.target.value)}
+        />
+        {/* Input box for the quantity to be added */}
+        <input
+          className="InputText-Quantity"
+          type="number"
+          placeholder="Quantity"
+          value={quantity}
+          min="1"
+          onChange={e => setQuantity(e.target.value)}
+        />
 
-          <input
-            className="InputText-Name"
-            type="text"
-            placeholder="Item name"
-            value={name}
-            required="required"
-            onChange={e => setName(e.target.value)}
-          />
-
-          <input
-            className="InputText-Quantity"
-            type="number"
-            placeholder="Quantity"
-            value={quantity}
-            min="1"
-            onChange={e => setQuantity(e.target.value)}
-          />
-
-          <button>Add</button>
-        </div>
+        <button>Add</button>
       </form>
       <button onClick={() => setEdit(!edit)}>Edit</button>
     </div>

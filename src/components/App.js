@@ -18,11 +18,13 @@ const App = () => {
 
         <h1>GROCERY LIST</h1>
 
-        <div className="App-GroceryList">
-            <InputText />
-            <ListDisplay />
+        <section className="App-GroceryList">
+          {/* main functionality */}
+          <InputText />
+          {/* Display all items */}
+          <ListDisplay />
 
-        </div>
+        </section>
       </div>
     </div>
   );
