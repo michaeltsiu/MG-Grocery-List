@@ -1,18 +1,35 @@
 import React, { useState, useContext } from 'react';
-import './InputText.css';
+import { createUseStyles } from 'react-jss';
 import { ItemsContext } from '../../utils';
 
+// Style sheet for jss
+const useStyles = createUseStyles({
+  InputText: {
+    display: 'flex',
+    marginTop: '2vh',
+    overflow: 'hidden',
+  },
+  Name: {
+    width: 'auto',
+  },
+  Quantity: {
+    width: 25,
+  }
+});
+
 const InputText = () => {
+  const classes = useStyles();
   const [ name, setName ] = useState('');
   const [ quantity, setQuantity ] = useState(1);
   const [ items, setItems, edit, setEdit ] = useContext(ItemsContext);
+
 
   const addItem = (item) => {
     setItems(items.concat(item));
   };
 
   return (
-    <div className="InputText">
+    <div className={classes.InputText}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -23,7 +40,7 @@ const InputText = () => {
       >
         {/* Input box for the item to be added */}
         <input
-          className="InputText-Name"
+          className={classes.Name}
           type="text"
           placeholder="Item name"
           value={name}
@@ -32,7 +49,7 @@ const InputText = () => {
         />
         {/* Input box for the quantity to be added */}
         <input
-          className="InputText-Quantity"
+          className={classes.Quantity}
           type="number"
           placeholder="Quantity"
           value={quantity}
