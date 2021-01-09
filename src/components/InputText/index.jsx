@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import '../styling/InputText.css';
-import { ItemsContext } from '../utils/Context';
+import './InputText.css';
+import { ItemsContext } from '../../utils';
 
 const InputText = () => {
   const [ name, setName ] = useState('');

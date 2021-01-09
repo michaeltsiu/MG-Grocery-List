@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import ListItem from './ListItem';
-import '../styling/ListDisplay.css';
-import { ItemsContext } from '../utils/Context';
+import ListItem from '../ListItem';
+import './ListDisplay.css';
+import { ItemsContext } from '../../utils';
 
 const ListDisplay = () => {
   const [items] = useContext(ItemsContext);

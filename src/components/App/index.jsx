@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styling/App.css';
-import ListDisplay from './ListDisplay';
-import InputText from './InputText';
+import './App.css';
+import ListDisplay from '../ListDisplay';
+import InputText from '../InputText';
 
 const App = () => {
 

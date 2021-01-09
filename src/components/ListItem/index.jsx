@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { ItemsContext } from '../utils/Context';
-import '../styling/ListItem.css';
+import { ItemsContext } from '../../utils';
+import './ListItem.css';
 
 const ListItem = ({ name, index }) => {
   const [items, setItems, edit] = useContext(ItemsContext);
