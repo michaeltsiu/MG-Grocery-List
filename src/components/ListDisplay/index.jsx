@@ -5,7 +5,7 @@ import { ItemsContext } from '../../utils';
 
 // Style sheet for jss
 const useStyles = createUseStyles({
-  List: {
+  list: {
     margin: 0,
     padding: 0,
   }
@@ -25,7 +25,7 @@ const ListDisplay = () => {
   ))
 
   return (
-    <ul className={classes.List}>
+    <ul className={classes.list}>
       {/* Returning the new product array */}
       {products}
     </ul>

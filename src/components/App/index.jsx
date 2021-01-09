@@ -10,17 +10,17 @@ const useStyles = createUseStyles({
     gridTemplateColumns: '1fr 1fr 1fr',
     gridTemplateRows: '0.3fr 1.7fr',
     gap: '0px 0px',
-    gridTemplateAreas: '"App-Banner App-Banner App-Banner"". App-Grocery-List ."',
+    gridTemplateAreas: '"banner banner banner"". container ."',
     backgroundColor: '#2e2c2c',
     height: '100vh',
   },
   banner: {
-    gridArea: 'App-Banner',
+    gridArea: 'banner',
     maxWidth: 444,
     maxHeight: 140,
   },
   container: {
-    gridArea: 'App-Grocery-List',
+    gridArea: 'container',
     backgroundColor: '#F7F4EB',
     display: 'flex',
     flexDirection: 'column',
@@ -36,7 +36,7 @@ const useStyles = createUseStyles({
     listContainer: {
       gridTemplateColumns: '1fr',
       gridTemplateRows: '1fr',
-      gridTemplateAreas: '"App-Banner""App-Grocery-List"',
+      gridTemplateAreas: '"banner""container"',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -75,12 +75,11 @@ const App = () => {
 
         <h1>GROCERY LIST</h1>
 
-        <section className="App-GroceryList">
+        <section>
           {/* main functionality */}
           <InputText />
           {/* Display all items */}
           <ListDisplay />
-
         </section>
       </div>
     </div>

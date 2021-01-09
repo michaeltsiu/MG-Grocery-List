@@ -4,15 +4,15 @@ import { ItemsContext } from '../../utils';
 
 // Style sheet for jss
 const useStyles = createUseStyles({
-  InputText: {
+  inputText: {
     display: 'flex',
     marginTop: '2vh',
     overflow: 'hidden',
   },
-  Name: {
+  name: {
     width: 'auto',
   },
-  Quantity: {
+  quantity: {
     width: 25,
   }
 });
@@ -29,7 +29,7 @@ const InputText = () => {
   };
 
   return (
-    <div className={classes.InputText}>
+    <div className={classes.inputText}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -40,7 +40,7 @@ const InputText = () => {
       >
         {/* Input box for the item to be added */}
         <input
-          className={classes.Name}
+          className={classes.name}
           type="text"
           placeholder="Item name"
           value={name}
@@ -49,7 +49,7 @@ const InputText = () => {
         />
         {/* Input box for the quantity to be added */}
         <input
-          className={classes.Quantity}
+          className={classes.quantity}
           type="number"
           placeholder="Quantity"
           value={quantity}

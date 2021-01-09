@@ -5,7 +5,7 @@ import { ItemsContext } from '../../utils';
 
 // Style sheet for jss
 const useStyles = createUseStyles({
-  ListItem: {
+  listItem: {
     border: '2px solid black',
     marginTop: 10,
     height: 25,
@@ -73,7 +73,7 @@ const ListItem = ({ name, index }) => {
   return (
     <li type="circle"
       onClick={!edit ? () => setComplete(!complete) : undefined}
-      className={`${classes.ListItem} ${complete && !edit ? classes.completed : ''}`}
+      className={`${classes.listItem} ${complete && !edit ? classes.completed : ''}`}
     >
 
       <div className={classes.container}>
