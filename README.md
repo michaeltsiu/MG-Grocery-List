@@ -1,6 +1,6 @@
-# Mozii's Grocery List
+# MG's Grocery List
 
-Welcome to Mozii's Grocery List! This is a web application that helps you consolidate a grocery list to keep track of what you need with Add/Delete/Completed functionality.
+Welcome to MG's Grocery List! This is a web application that helps you consolidate a grocery list to keep track of what you need with Add/Delete/Completed functionality.
 
 ## Installation
 
